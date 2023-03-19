@@ -14,7 +14,7 @@ import java.util.List;
 public class ChatGPTService {
 
     //    @Value("${openai.api_key}")
-    private String openaiApiKey = "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";
+    private String openaiApiKey = "";
 
     private RestTemplate restTemplate = new RestTemplate();
 

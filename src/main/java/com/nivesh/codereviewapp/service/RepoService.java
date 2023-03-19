@@ -17,7 +17,7 @@ import java.util.List;
 public class RepoService {
 
     //    @Value("${github.token}")
-    private String githubToken = "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";
+    private String githubToken = "";
 
     private RestTemplate restTemplate = new RestTemplate();
 
