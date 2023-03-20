@@ -1,6 +1,7 @@
 package com.nivesh.codereviewapp.model;
 
 import java.util.List;
+import java.util.Map;
 
 public class CodeReviewResponse {
     private List<String> comments;
