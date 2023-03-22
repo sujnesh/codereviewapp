@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 public class CodeReviewController {
@@ -31,5 +30,11 @@ public class CodeReviewController {
         CodeReviewResponse response = new CodeReviewResponse();
         response.setComments(codeReviewComments);
         return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/api/generate-pr-summary")
+    public ResponseEntity<String> generatePrSummary(@RequestBody CodeReviewRequest request) throws JSONException {
+        String prSummary = chatGPTService.getPrSummary(request);
+        return ResponseEntity.ok(prSummary);
     }
 }
